@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/font/plusjakartasans/PlusJakartaSans-Light.ttf') format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/font/plusjakartasans/PlusJakartaSans-Regular.ttf') format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/font/plusjakartasans/PlusJakartaSans-Medium.ttf') format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/font/plusjakartasans/PlusJakartaSans-SemiBold.ttf') format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/font/plusjakartasans/PlusJakartaSans-Bold.ttf') format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('../assets/font/firacode/FiraCode-Regular.ttf') format("truetype");
+  font-weight: 400;
+}
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #1A1A1A;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+code {
+  font-family: 'Fira Code';
+}
