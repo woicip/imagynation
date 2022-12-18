@@ -9,7 +9,6 @@ export default function Footer(props: any){
                     This project is Open Source means<br/> 
                     you can contribute to the project on GitHub.
                 </p>
-                <p className="mt-[40px] text-sm text-white/40">by <Link href="httsp://cipta.vercel.app" className="hover:underline hover:text-white">Gunawan Cipta</Link></p>
             </div>
 
             <div>
