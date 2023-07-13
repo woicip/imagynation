@@ -4,7 +4,7 @@ export default function Footer(props: any){
     return (
         <footer className='mt-[30px] flex items-start justify-between'>
             <div>
-                <h4 className='font-bold text-lg'>🧩 Imagy API</h4>
+                <h4 className='font-bold text-lg'>🧩 Imagynation</h4>
                 <p className='mt-[5px] text-white/40 text-sm'>
                     This project is Open Source means<br/> 
                     you can contribute to the project on GitHub.

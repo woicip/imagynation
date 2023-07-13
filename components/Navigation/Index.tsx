@@ -27,13 +27,24 @@ export default function Navigation(props: any){
         dispatch({ type: 'user' });
     }
 
+    function PostHandler(){
+        dispatch({ type: 'posts' })
+    }
+
     return (
         <div className='mt-[100px] flex items-center border-b border-white/20 mobileL:overflow-x-scroll'>
             { state.user && <Active> 😀 User </Active> }
             { !state.user && <NonActive handler={UserHandler}> 😀 User </NonActive> }
 
+            { state.posts && <Active> 🎍 Post </Active> }
+            { !state.posts && <NonActive handler={PostHandler}> 🎍 Post </NonActive> }
+
+            {/* { state.blog && <Active> 🎃 Blog </Active> }
+            { !state.blog && <NonActive handler={() => dispatch({ type: "blog" })}> 🎃 Blog </NonActive> }
+
             { state.anime && <Active> 🎐 Anime <Soon/> </Active> }
-            { !state.anime && <NonActive handler={AnimeHandler}> 🎐 Anime <Soon/> </NonActive> }
+            { !state.anime && <NonActive handler={AnimeHandler}> 🎐 Anime <Soon/> </NonActive> } */}
+
         </div>
     )
 }

@@ -9,6 +9,7 @@ module.exports = {
     screens: {
       'desktop': { 'max': '1440px' },
       'laptopXL': { 'max': '1280px' },
+      'laptopM': { 'max': '1366px' },
       'laptop': { 'max': '1024px' },
       'tabletL': { 'max': '820px' },
       'tabletM': { 'max': '640px' },
