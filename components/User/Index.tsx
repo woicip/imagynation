@@ -19,7 +19,7 @@ export default function Anime(props: any){
                 <h1 className='text-4xl font-bold flex items-center'>
                     User Data
                 </h1>
-                <p className='mt-[10px] text-sm text-white/70'>Providing you with User&apos;s data for your UI Prototype/UI Design testing with data schema like below.</p>
+                <p className='mt-[10px] text-white/70'>Providing you with user dummy with data schema like below.</p>
             </div>
 
             <div className="mt-[50px] text-sm">
@@ -34,7 +34,7 @@ export default function Anime(props: any){
                     <Address method="GET" address={`${context.api_endpoint}/random-user`} />
                     <section className="my-[50px]">
                         <h4 className="text-lg font-medium">Description</h4>
-                        <p className="text-sm text-white/80">This endpoint will give you different user data between ID 1 to ID 10 of user.</p>
+                        <p className="text-white/80">This endpoint will give you random dummy user data between <span className="text-yellow-500 font-mono">"1"</span> to <span className="text-yellow-500 font-mono">"10"</span> of a post.</p>
                     </section>
                     <Response title="JSON Response" res={<RandomUserJSON />} />
                 </div>
@@ -42,11 +42,16 @@ export default function Anime(props: any){
                 <Separation />
 
                 <div>
-                    <Header number="02" title="Single User" desc="You will get a lot of user data in one single array inside JSON" />
-                    <Address method="GET" address={`${context.api_endpoint}/user/5`} />
+                    <Header number="02" title="Single User" desc="You will get a single dummy user data" />
+                    <Address method="GET" address={<>{context.api_endpoint}/user/<span className="text-yellow-500 font-mono">:id</span></>} />
                     <section className="my-[50px]">
-                        <p className="text-sm text-white/80">You can choose the ID for a user from 1 to 10. Each ID will give you different user&apos;s data.</p>
+                        <h4 className="text-lg font-medium">Description</h4>
+                        <p className="text-white/80">You can query the <span className="text-yellow-500 font-mono">":id"</span> to get a dummy user data, query between id <span className="text-yellow-500 font-mono">"1"</span> to <span className="text-yellow-500 font-mono">"10"</span>. Each <span className="text-yellow-500 font-mono">"id"</span> will give you different result of user data.</p>
                     </section>
+                    <div className="mb-[50px]">
+                        <h4 className="font-medium mb-[10px]">Example</h4>
+                        <Address method="GET" address={<>{context.api_endpoint}/post/<span className="text-yellow-500 font-mono">5</span></>} />
+                    </div>
                     <Response title="JSON Response" res={<SelectedUserJSON />} />
                 </div>
 
@@ -56,7 +61,8 @@ export default function Anime(props: any){
                     <Header number="03" title="All Users" desc="The endpoint will give you all user" />
                     <Address method="GET" address={`${context.api_endpoint}/users`} />
                     <section className="my-[50px]">
-                        <p className="text-sm text-white/80">This endpoint will give you users from ID 1 to 10 in order.</p>
+                        <h4 className="text-lg font-medium">Description</h4>
+                        <p className="text-white/80">This endpoint will give you all of users data from id <span className="text-yellow-500 font-mono">"1"</span> to <span className="text-yellow-500 font-mono">"10"</span> in order.</p>
                     </section>
                     <Response title="JSON Response" res={<AllUsersJSON />} />
                 </div>

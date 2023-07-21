@@ -49,20 +49,20 @@ export default function Home() {
     return (
         <section className="flex flex-col items-center justify-center animate-fadeIn">
             <Head>
-                <title>🧩 Imagynation</title>
-                <meta name="description" content="Images API Documentation" />
+                <title>🦄 Imagynation</title>
+                <meta name="description" content="IMAGYNATION API DOCUMENTATION" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main className="w-[50%] py-[110px] text-white laptopXL:w-[80%] tabletL:w-[90%]">
                 <section className='flex flex-col items-center justify-center '>
-                    <h1 className='text-6xl tabletM:text-5xl font-bold text-center'>🧩 Imagynation</h1>
-                    <p className='mt-[30px] text-center text-white'>
+                    <h1 className='text-6xl tabletM:text-5xl font-bold text-center'>🦄 Imagynation.</h1>
+                    <p className='mt-[30px] text-center text-lg text-white'>
                         Accelerate UI prototyping, offering developers the essential dummy data they crave.
                     </p>
-                    <div className='mt-[20px] text-sm py-[5px] px-[15px] bg-docs-cyan/40 border border-white/20 rounded-full'>
+                    {/* <div className='mt-[20px] text-sm py-[5px] px-[15px] bg-docs-cyan/40 border border-white/20 rounded-full'>
                         <p className='text-white font-semibold'>v1.0.0</p>
-                    </div>
+                    </div> */}
                 </section>
 
                 <Navigation state={state} dispatch={dispatch} />

@@ -5,7 +5,7 @@ export default function SchemaData(props: any){
         <div>
             <CurlyBraces>&#123;</CurlyBraces>
             <br/>
-                <span className="pl-[40px]"><span className="text-green-500">date</span>: string,</span> <br/>
+                <span className="pl-[40px]"><span className="text-green-500">date</span>: Date,</span> <br/>
                 <span className="pl-[40px]"><span className="text-green-500">posts</span>: <CurlyBraces>&#123;</CurlyBraces></span>
                 <br/>
                     <span className="pl-[80px]"><span className="text-green-500">id</span>: number</span> <br/>

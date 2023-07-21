@@ -4,15 +4,15 @@ export default function Footer(props: any){
     return (
         <footer className='mt-[30px] flex items-start justify-between'>
             <div>
-                <h4 className='font-bold text-lg'>🧩 Imagynation</h4>
+                <h4 className='font-bold text-lg'>🦄 Imagynation.</h4>
                 <p className='mt-[5px] text-white/40 text-sm'>
-                    This project is Open Source means<br/> 
-                    you can contribute to the project on GitHub.
+                    This project is Open Source Software<br/> 
+                    you can contribute in <Link href="https://github.com/woicip/imagynation-api" className="underline">API</Link> & <Link href="https://github.com/woicip/imagynation-docs" className="underline">Docs</Link>
                 </p>
             </div>
 
             <div>
-                <p className='text-sm text-white/40'>2022</p>
+                <p className='text-sm text-white/40'>Developed with ❤ by <Link href="https://cipta.dev" className="underline">cipta.dev</Link></p>
             </div>
         </footer>
     )
