@@ -1,0 +1,93 @@
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+interface User {
+    id: number,
+    name: string,
+    email: string,
+    phone: string,
+    avatar: string
+}
+
+const users: Array<User> = [
+    {   
+        id: 1,
+        name: "Alex Basherman",
+        email: "alex.basherman@email.com",
+        phone: "+1 (733) 991-3371",
+        avatar: "https://a.pomf.cat/ykbrtu.jpg"
+    },
+    {
+        id: 2,
+        name: "Founche Daman",
+        email: "founcheDaman12@mail.com",
+        phone: "+1 (968) 558-4041",
+        avatar: "https://a.pomf.cat/uskdjm.jpg"
+    },
+    {
+        id: 3,
+        name: "George A. William",
+        email: "georgeawilliam@mail.com",
+        phone: "+1 (626) 830-3705",
+        avatar: "https://a.pomf.cat/dfyjjj.jpg"
+    },
+    {
+        id: 4,
+        name: "Jane Elsie",
+        email: "janeElsie22@mail.com",
+        phone: "+1 (456) 634-6471",
+        avatar: "https://a.pomf.cat/thkrhq.jpg"
+    },
+    {
+        id: 5,
+        name: "Josh Arthur",
+        email: "arthur.josh@mail.com",
+        phone: "+1 (934) 759-2524",
+        avatar: "https://a.pomf.cat/vsglja.jpg"
+    },
+    {
+        id: 6,
+        name: "Julian Wan",
+        email: "wan.julian997@mail.com",
+        phone: "+1 (582) 538-1427",
+        avatar: "https://a.pomf.cat/fahczh.jpg"
+    },
+    {
+        id: 7,
+        name: "Nyla Green",
+        email: "greennyla@mail.com",
+        phone: "+1 (592) 987-3988",
+        avatar: "https://a.pomf.cat/sjgauv.jpg"
+    },
+    {
+        id: 8,
+        name: "Olivia Harris",
+        email: "olivia.harris@mail.com",
+        phone: "+1 (653) 535-6929",
+        avatar: "https://a.pomf.cat/pudphi.jpg"
+    },
+    {
+        id: 9,
+        name: "Rebecca Garcia",
+        email: "garciarebecca990@mail.com",
+        phone: "+1 (566) 599-5062",
+        avatar: "https://a.pomf.cat/sczmaa.jpg"
+    },
+    {
+        id: 10,
+        name: "Tania Grace",
+        email: "tania.grace9@mail.com",
+        phone: "+1 (292) 777-5239",
+        avatar: "https://a.pomf.cat/ocxhyd.jpg"
+    },
+];
+
+export default function handler(req: NextApiRequest, res: NextApiResponse<User | { status: string, message: string }>){
+    const { id } = req.query as any
+
+    if(req.method !== 'GET') return res.status(405).json({ status: 'Error', message: 'Method Not Allowed' })   
+    if(parseInt(id) < 1 || parseInt(id) > 10) return res.status(400).json({ status: 'Bad Request', message: 'Argument is out of range.\nPlease specify between 1 ~ 10' })   
+
+    const theUser = users[id - 1]
+    res.status(200).json(theUser)
+}
