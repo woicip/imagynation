@@ -49,10 +49,10 @@ export default function Home() {
     return (
         <section className="flex flex-col items-center justify-center animate-fadeIn">
             <Head>
-                <title>🦄 IMAGYNATION</title>
+                <title>IMAGYNATION</title>
                 <meta name="description" content="Accelerate UI prototyping, offering developers the essential dummy data they crave." />
                 <link rel="icon" href="/favicon.ico" />
-                <meta property="og:title" content="🦄 IMAGYNATION" />
+                <meta property="og:title" content="IMAGYNATION" />
                 <meta property="og:url" content="https://imagynation.vercel.app" />
                 <meta property="og:description" content="Accelerate UI prototyping, offering developers the essential dummy data they crave." />
                 <meta property="og:image" content="https://imagynation.vercel.app/meta.png" />
