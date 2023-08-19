@@ -32,12 +32,12 @@ export default function Navigation(props: any){
     }
 
     return (
-        <div className='mt-[100px] flex items-center border-b border-white/20 mobileL:overflow-x-scroll'>
+        <div className='sticky top-0 pt-[10px] mt-[100px] flex items-center border-b border-white/20 mobileL:overflow-x-scroll bg-[#1A1A1A] z-10'>
             { state.user && <Active> 😀 User </Active> }
             { !state.user && <NonActive handler={UserHandler}> 😀 User </NonActive> }
 
-            { state.posts && <Active> 🎍 Post </Active> }
-            { !state.posts && <NonActive handler={PostHandler}> 🎍 Post </NonActive> }
+            { state.posts && <Active> 📨 Post </Active> }
+            { !state.posts && <NonActive handler={PostHandler}> 📨 Post </NonActive> }
 
             {/* { state.blog && <Active> 🎃 Blog </Active> }
             { !state.blog && <NonActive handler={() => dispatch({ type: "blog" })}> 🎃 Blog </NonActive> }

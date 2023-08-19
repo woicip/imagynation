@@ -7,7 +7,7 @@ export default function Footer(props: any){
                 <h4 className='font-bold text-lg'>🦄 Imagynation.</h4>
                 <p className='mt-[5px] text-white/40 text-sm'>
                     This project is Open Source Software<br/> 
-                    you can contribute in <Link href="https://github.com/woicip/imagynation-api" className="underline">API</Link> & <Link href="https://github.com/woicip/imagynation-docs" className="underline">Docs</Link>
+                    you can contribute to <Link href="https://github.com/woicip/imagynation-docs" className="underline">Imagynation</Link>
                 </p>
             </div>
 
