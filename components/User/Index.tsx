@@ -50,7 +50,7 @@ export default function Anime(props: any){
                     </section>
                     <div className="mb-[50px]">
                         <h4 className="font-medium mb-[10px]">Example</h4>
-                        <Address method="GET" address={<>{context.api_endpoint}/post/<span className="text-yellow-500 font-mono">5</span></>} />
+                        <Address method="GET" address={<>{context.api_endpoint}/user/<span className="text-yellow-500 font-mono">5</span></>} />
                     </div>
                     <Response title="JSON Response" res={<SelectedUserJSON />} />
                 </div>
