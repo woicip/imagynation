@@ -31,7 +31,7 @@ export default function Posts(props: any){
             <div className='mt-[80px]'>
                 <div>
                     <Header number="01" title="Random Single Post" desc="You will get a random post everytime you call this endpoint" />
-                    <Address method="GET" address={`${context.api_endpoint}/random-post`} />
+                    <Address method="GET" address={`${context.api_endpoint}/post/random`} />
                     <section className="my-[50px]">
                         <h4 className="text-lg font-medium">Description</h4>
                         <p className="text-white/80">This endpoint will give you random post data between <span className="text-yellow-500 font-mono">"1"</span> to <span className="text-yellow-500 font-mono">"10"</span> of a post.</p>
