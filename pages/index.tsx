@@ -49,14 +49,18 @@ export default function Home() {
     return (
         <section className="flex flex-col items-center justify-center animate-fadeIn">
             <Head>
-                <title>🦄 Imagynation</title>
-                <meta name="description" content="IMAGYNATION API DOCUMENTATION" />
+                <title>🦄 IMAGYNATION</title>
+                <meta name="description" content="Accelerate UI prototyping, offering developers the essential dummy data they crave." />
                 <link rel="icon" href="/favicon.ico" />
+                <meta property="og:title" content="🦄 IMAGYNATION" />
+                <meta property="og:url" content="https://imagynation.vercel.app" />
+                <meta property="og:description" content="Accelerate UI prototyping, offering developers the essential dummy data they crave." />
+                <meta property="og:image" content="https://imagynation.vercel.app/meta.png" />
             </Head>
 
             <main className="w-[50%] py-[110px] text-white laptopXL:w-[80%] tabletL:w-[90%]">
                 <section className='flex flex-col items-center justify-center '>
-                    <h1 className='text-6xl tabletM:text-5xl font-bold text-center'>🦄 Imagynation.</h1>
+                    <h1 className='text-6xl tabletM:text-5xl font-medium text-center'>🦄 Imagynation</h1>
                     <p className='mt-[30px] text-center text-lg text-white'>
                         Accelerate UI prototyping, offering developers the essential dummy data they crave.
                     </p>
