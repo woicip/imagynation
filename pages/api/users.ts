@@ -82,8 +82,8 @@ const users: Array<User> = [
     },
 ];
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<object[] | { status: string, message: string }>){
+export default function handler(req: NextApiRequest, res: NextApiResponse<{ date: Date, users: object[] } | { status: string, message: string }>){
     if(req.method !== 'GET') return res.status(405).json({ status: 'Error', message: 'Method Not Allowed' })
 
-    res.status(200).json(users)
+    res.status(200).json({ date: new Date(), users: users })
 }

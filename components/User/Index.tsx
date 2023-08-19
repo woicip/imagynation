@@ -31,10 +31,10 @@ export default function Anime(props: any){
             <div className='mt-[80px]'>
                 <div>
                     <Header number="01" title="Random Single User" desc="You will get random user everytime you call this endpoint" />
-                    <Address method="GET" address={`${context.api_endpoint}/random-user`} />
+                    <Address method="GET" address={`${context.api_endpoint}/user/random`} />
                     <section className="my-[50px]">
                         <h4 className="text-lg font-medium">Description</h4>
-                        <p className="text-white/80">This endpoint will give you random dummy user data between <span className="text-yellow-500 font-mono">"1"</span> to <span className="text-yellow-500 font-mono">"10"</span> of a post.</p>
+                        <p className="text-white/80">This endpoint will give you a random dummy user data between <span className="text-yellow-500 font-mono">"1"</span> to <span className="text-yellow-500 font-mono">"10"</span> of a post.</p>
                     </section>
                     <Response title="JSON Response" res={<RandomUserJSON />} />
                 </div>

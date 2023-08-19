@@ -82,12 +82,12 @@ const users: Array<User> = [
     },
 ];
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<User | { status: string, message: string }>){
+export default function handler(req: NextApiRequest, res: NextApiResponse<{ date: Date, user: User } | { status: string, message: string }>){
     const { id } = req.query as any
 
     if(req.method !== 'GET') return res.status(405).json({ status: 'Error', message: 'Method Not Allowed' })   
     if(parseInt(id) < 1 || parseInt(id) > 10) return res.status(400).json({ status: 'Bad Request', message: 'Argument is out of range.\nPlease specify between 1 ~ 10' })   
 
     const theUser = users[id - 1]
-    res.status(200).json(theUser)
+    res.status(200).json({ date: new Date(), user: theUser })
 }

@@ -83,9 +83,9 @@ const users: Array<User> = [
     },
 ];
 
-export default function handler(req: NextApiRequest, res: NextApiResponse<User | { status: string, message: string }>) {
+export default function handler(req: NextApiRequest, res: NextApiResponse<{ date: Date, user: User } | { status: string, message: string }>) {
     if(req.method !== 'GET') return res.status(405).json({ status: 'Error', message: 'Method Not Allowed' })   
 
     const key = generateKey({ length: users.length });
-    res.status(200).json(users[key])
+    res.status(200).json({ date: new Date(), user: users[key] })
 }
